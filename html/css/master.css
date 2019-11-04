@@ -1,0 +1,16 @@
+h1{
+  color:#29c2d4;
+  background-color: white;
+  font-family: sans-serif;
+}
+body{
+  background-color: white;
+}
+
+.bostonPhoto{
+  background-size: contain;
+  background-position: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
