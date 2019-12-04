@@ -1,84 +1,392 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Portfolio</title>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Portfolio</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-	crossorigin="anonymous">
-<link rel="stylesheet" href="css/styles2.css">
-<link
-	href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:300,400"
-	rel="stylesheet">
 
-<style>
-.responsive {
-  width: 90%;
-  height: auto;
-}
-</style>
+	<!-- Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+
+	<!-- Stylesheets -->
+
+	<link href="common-css/bootstrap.css" rel="stylesheet">
+
+	<link href="common-css/ionicons.css" rel="stylesheet">
+
+	<link href="common-css/fluidbox.min.css" rel="stylesheet">
+
+	<link href="01-cv-portfolio/css/styles.css" rel="stylesheet">
+
+	<link href="01-cv-portfolio/css/responsive.css" rel="stylesheet">
+
 </head>
-  <body>
+<body>
 
-  <div class="bg-info navbar-dark text-white">
-    <div class="container">
-      <nav class="navbar px-0 navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a href="index.html" class="pl-md-0 p-3 text-light">Nav 1</a>
-            <a href="app.html" class="p-3 text-decoration-none text-light">Nav 2</a>
-            <a href="form.html" class="p-3 text-decoration-none text-light">Nav 3</a>
-          </div>
-        </div>
-      </nav>
+	<header>
+		<div class="container">
+			<div class="heading-wrapper">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-location-outline"></i>
+							<div class="right-area">
+								<h5>Natick, MA 01760</h5>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
 
-    </div>
-  </div>
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-telephone-outline"></i>
+							<div class="right-area">
+								<h5>(760) 978-8677</h5>
+								<h6>M0N - FRI, 8AM - 7PM</h6>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-chatboxes-outline"></i>
+							<div class="right-area">
+								<h5>castillo752x@gmail.com</h5>
+								<h6>REPLY IN 24 HOURS</h6>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+				</div><!-- row -->
+			</div><!-- heading-wrapper -->
+
+			<a class="downlad-btn" href="#">Download Resume</a>
+		</div><!-- container -->
+	</header>
+
+	<section class="intro-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 col-lg-2"></div>
+				<div class="col-md-10 col-lg-8">
+					<div class="intro">
+						<div class="profile-img"><img src="images/profile-1-250x250.jpg" alt=""></div>
+						<h2><b>Noel Castillo</b></h2>
+						<h4 class="font-yellow">Full Stack Java Developer</h4>
+						<ul class="information margin-tb-30">
+							<li><b>BORN : </b>December 25, 1993</li>
+							<li><b>EMAIL : </b>castillo752x@gmail.com</li>
+						</ul>
+						<ul class="social-icons">
+							<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+							<li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+							<li><a href="#"><i class="ion-social-instagram"></i></a></li>
+							<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+						</ul>
+					</div><!-- intro -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- intro-section -->
+
+	<section class="portfolio-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Portfolio</b></h3>
+						<h6 class="font-lite-black"><b>MY WORK</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="portfolioFilter clearfix margin-b-80">
+						<a href="#" data-filter="*" class="current"><b>ALL</b></a>
+						<a href="#" data-filter=".web-design"><b>WEB DESIGN</b></a>
+						<a href="#" data-filter=".branding"><b>BRANDING</b></a>
+						<a href="#" data-filter=".graphic-design"><b>GRAPHIC DESIGN</b></a>
+					</div><!-- portfolioFilter -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+		<div class="portfolioContainer">
+
+			<div class="p-item web-design">
+				<a href="images/portfolio-1-600x400.jpg" data-fluidbox>
+					<img src="images/portfolio-1-600x400.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item branding graphic-design">
+				<a href="images/portfolio-7-600x800.jpg" data-fluidbox>
+					<img src="images/portfolio-7-600x800.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item web-design">
+				<a href="images/portfolio-2-600x400.jpg" data-fluidbox>
+					<img src="images/portfolio-2-600x400.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item p-item-2 graphic-design">
+				<a class="img" href="images/portfolio-8-300x400.jpg" data-fluidbox>
+					<img src="images/portfolio-8-300x400.jpg" alt=""></a>
+				<a class="img" href="images/portfolio-9-300x400.jpg" data-fluidbox>
+					<img src="images/portfolio-9-300x400.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item branding graphic-design">
+				<a href="images/portfolio-3-600x400.jpg" data-fluidbox>
+					<img src="images/portfolio-3-600x400.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item graphic-design web-design">
+				<a href="images/portfolio-4-600x400.jpg" data-fluidbox>
+					<img src="images/portfolio-4-600x400.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item  graphic-design branding">
+				<a href="images/portfolio-5-600x800.jpg" data-fluidbox>
+					<img src="images/portfolio-5-600x800.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item web-design branding">
+				<a href="images/portfolio-6-600x800.jpg" data-fluidbox>
+					<img src="images/portfolio-6-600x800.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+			<div class="p-item p-item-2 graphic-design">
+				<a class="img" href="images/portfolio-10-300x400.jpg" data-fluidbox>
+					<img src="images/portfolio-10-300x400.jpg" alt=""></a>
+				<a class="img" href="images/portfolio-11-300x400.jpg" data-fluidbox>
+					<img src="images/portfolio-11-300x400.jpg" alt=""></a>
+			</div><!-- p-item -->
+
+		</div><!-- portfolioContainer -->
+
+	</section><!-- portfolio-section -->
 
 
+	<section class="about-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>About me</b></h3>
+						<h6 class="font-lite-black"><b>PROFESSIONAL PATH</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<p class="margin-b-50">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque
+					sit amet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Nulla maximus pellentes que velit, quis consequat nulla effi citur at.
+					Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis tellus.
+					Sed finibus aliquam neque sit amet sodales. Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Nulla maximus pellentes que velit, quis consequat nulla
+					effi citur at.Maecenas sed massa tristique.</p>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-30">
+								<div class="radial-progress" data-prog-percent=".97">
+									<div></div>
+									<h6 class="progress-title">HTML5 & CSS3</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-30">
+								<div class="radial-progress" data-prog-percent=".78">
+									<div></div>
+									<h6 class="progress-title">WEB DESIGN</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-30">
+								<div class="radial-progress" data-prog-percent=".67">
+									<div></div>
+									<h6 class="progress-title">JAVA</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-50">
+								<div class="radial-progress" data-prog-percent=".97">
+									<div></div>
+									<h6 class="progress-title">PHP</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+
+					</div><!-- row -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- about-section -->
+
+	<section class="experience-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Work Experience</b></h3>
+						<h6 class="font-lite-black"><b>PREVIOUS JOBS</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+
+					<div class="experience margin-b-50">
+						<h4><b>JUNIOR PROJECT MANAGER</b></h4>
+						<h5 class="font-yellow"><b>DESIGN STUDIO</b></h5>
+						<h6 class="margin-t-10">MARCH 2015 - PRESENT</h6>
+						<p class="font-semi-white margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit,
+							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu,
+							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+						<ul class="list margin-b-30">
+							<li>Duis non volutpat arcu, eu mollis tellus.</li>
+							<li>Quis consequat nulla effi citur at.</li>
+							<li>Sed finibus aliquam neque sit.</li>
+						</ul>
+					</div><!-- experience -->
+
+					<div class="experience margin-b-50">
+						<h4><b>WEB MASTER/WEB DEVELOPER</b></h4>
+						<h5 class="font-yellow"><b>DESIGN & WEB STUDIO</b></h5>
+						<h6 class="margin-t-10">APRIL 2014 - FEBRUARY 2015</h6>
+						<p class="font-semi-white margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit,
+							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu,
+							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+						<ul class="list margin-b-30">
+							<li>Duis non volutpat arcu, eu mollis tellus.</li>
+							<li>Quis consequat nulla effi citur at.</li>
+							<li>Sed finibus aliquam neque sit.</li>
+						</ul>
+					</div><!-- experience -->
+
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+	</section><!-- experience-section -->
+
+	<section class="education-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Education</b></h3>
+						<h6 class="font-lite-black"><b>ACADEMIC CAREER</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="education-wrapper">
+						<div class="education margin-b-50">
+							<h4><b>BACHELOR'S IN BUSINESS MANAGEMENT, ACCOUNTING MINOR</b></h4>
+							<h5 class="font-yellow"><b>FRAMINGHAM STATE UNIVERSITY</b></h5>
+							<h6 class="font-lite-black margin-t-10">GRADUATED IN AUGUST 2019 (2 YEARS)</h6>
+							<p class="margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit,
+							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu,
+							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4><b>ASSOCIATE'S IN BUSINESS ADMINISTRATION</b></h4>
+							<h5 class="font-yellow"><b>MASSACHUSETT'S BAY COMMUNITY COLLEGE</b></h5>
+							<h6 class="font-lite-black margin-t-10">GRADUATED IN AUGUST 2017(1 YEAR)</h6>
+							<p class="margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit,
+							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu,
+							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4><b>GRADUATED VALEDICTERIAN</b></h4>
+							<h5 class="font-yellow"><b>PUBLIC COLLEGE</b></h5>
+							<h6 class="font-lite-black margin-t-10">GRADUATED IN MAY 2008(4 YEARS)</h6>
+							<p class="margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit,
+							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu,
+							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+						</div><!-- education -->
+					</div><!-- education-wrapper -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+	</section><!-- about-section -->
+
+	<section class="counter-section" id="counter">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="400" data-count="3">0</span></b></h1>
+						<h5 class="desc"><b>Coder Degrees</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="25">0</span></b></h1>
+						<h5 class="desc"><b>Project Completed</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="700" data-count="311">0</span></b></h1>
+						<h5 class="desc"><b>Satisfied Clients</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="2000" data-count="732">0</span></b></h1>
+						<h5 class="desc"><b>Finished Projects</b></h5>
+					</div><!-- margin-b-30 -->
+				</div><!-- col-md-3-->
+
+			</div><!-- row-->
+		</div><!-- container-->
+    </section><!-- counter-section-->
+
+	<footer>
+		<p class="copyright">
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		</p>
 
 
-<div class="jumbotron bg-info jumbotron-harbor text-white mb-0 radius-0">
-  <div class="container">
+	</footer>
 
-      <h1 class="display-1 text-light">Noel's Portfolio</h1>
-      <span class="lead">List my projects here</span>
 
-      <div class="mt-4">
-        <a href="#!"
-           class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2">
-          <span>Resume Link</span>
-        </a>
+	<!-- SCIPTS -->
 
-        <a href="#!"
-           class="btn btn-primary btn-pill btn-wide btn-lg my-2">
-          <span>Another Button</span>
-        </a>
-      </div>
+	<script src="common-js/jquery-3.2.1.min.js"></script>
 
-  </div>
-</div>
+	<script src="common-js/tether.min.js"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="common-js/bootstrap.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="common-js/isotope.pkgd.min.js"></script>
 
-  </body>
+	<script src="common-js/jquery.waypoints.min.js"></script>
+
+	<script src="common-js/progressbar.min.js"></script>
+
+	<script src="common-js/jquery.fluidbox.min.js"></script>
+
+	<script src="common-js/scripts.js"></script>
+
+</body>
 </html>
